@@ -1,0 +1,88 @@
+@keyframes flip {
+    0% {
+        transform: perspective(400px) rotateY(0deg);
+    }
+
+    50% {
+        transform: perspective(400px) rotateY(180deg);
+    }
+
+    100% {
+        transform: perspective(400px) rotateY(360deg);
+    }
+}
+
+.afmLogmanSeriesCards {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    padding: 12px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.afmLogmanSeriesCards:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background: #e9e9e9;
+}
+
+.afmLogmanSeriesCards:hover .transition-transform {
+    animation: flip 1s ease-in-out;
+}
+
+.backButtonBrandSelection {
+    text-align: center;
+}
+
+.btnn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #121212;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btnBrandd {
+    color: #fff;
+}
+
+.btnBrandd:hover {
+    color: #121212;
+}
+
+.btnn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #121212;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btnBrandd::before {
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.btnBrandd::before {
+    height: 180%;
+}
+
+.btnBrandd:hover::before {
+    height: 0%;
+}

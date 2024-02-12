@@ -1,0 +1,30 @@
+.fuelTypeChiptuning {
+    border: 2px solid #000;
+    font-size: 50px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.fuelTypeChiptuning:hover {
+    background: #000;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.tableAccordion {
+    width: 70%;
+}
+
+@media screen and (max-width: 550px) {
+    .tableAccordion {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .tableAccordion {
+        width: 100%;
+    }
+}
